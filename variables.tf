@@ -21,7 +21,7 @@ variable "ec2_instance_tags" {
 variable "image_id" {
   type        = string
   description = "The id of the machine image (AMI) to use for the server."
-  default     = "ami-053b0d53c279acc90"
+  default     = "ami-07c1b39b7b3d2525d"
 
   validation {
     condition     = length(var.image_id) > 4 && substr(var.image_id, 0, 4) == "ami-"
@@ -31,10 +31,10 @@ variable "image_id" {
 
 variable "az_name" {
   description = "Provide AZ name as per Region to launch Instance"
-  default = "us-east-1a"
+  default = "eu-west-2a"
 }
 
 variable "keyname" {
   description = "Provide SSH key name"
-  default = "virginia_sudhams"
+  default = "CICD"
 }
